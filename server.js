@@ -1,9 +1,11 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+app.use(cors());
 
 var users = [
     { "id": 1, "name": "John" },
